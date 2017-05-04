@@ -13,16 +13,19 @@ using PyCall, JLD, PyCallJLD
 
 @pyimport sklearn.linear_model as lm
 
+# Create some Python objects
 m1 = lm.LinearRegression()
 m2 = lm.ARDRegression()
 models = [m1, m2];
 
-# Save Python objects
+# Save them to models.jld
 JLD.save("models.jld", "mods", [m1, m2])
 
-# Load Python objects
+# Load them back
 JLD.load("models.jld", "mods")
 ```
+
+The objects are serialized using [`cPickle.dumps`](https://docs.python.org/2/library/pickle.html#pickle.dumps)
 
 See [PyCall](https://github.com/JuliaPy/PyCall.jl)'s and
 [JLD](https://github.com/JuliaIO/JLD.jl/)'s documentation for details.
