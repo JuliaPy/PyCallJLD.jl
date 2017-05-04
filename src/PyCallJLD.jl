@@ -10,7 +10,7 @@ function __init__()
     copy!(loads, pyimport("cPickle")[:loads])
 end
 
-struct PyObjectSerialization
+immutable PyObjectSerialization
     repr::String
 end
 
