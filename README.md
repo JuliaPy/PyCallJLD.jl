@@ -1,10 +1,10 @@
 # PyCallJLD
 
-[![Build Status](https://travis-ci.org/cstjean/PyCallJLD.jl.svg?branch=master)](https://travis-ci.org/cstjean/PyCallJLD.jl)
+[![Build Status](https://travis-ci.org/JuliaPy/PyCallJLD.jl.svg?branch=master)](https://travis-ci.org/JuliaPy/PyCallJLD.jl)
 
-[![Coverage Status](https://coveralls.io/repos/cstjean/PyCallJLD.jl/badge.svg?branch=master&service=github)](https://coveralls.io/github/cstjean/PyCallJLD.jl?branch=master)
+[![Coverage Status](https://coveralls.io/repos/JuliaPy/PyCallJLD.jl/badge.svg?branch=master&service=github)](https://coveralls.io/github/JuliaPy/PyCallJLD.jl?branch=master)
 
-[![codecov.io](http://codecov.io/github/cstjean/PyCallJLD.jl/coverage.svg?branch=master)](http://codecov.io/github/cstjean/PyCallJLD.jl?branch=master)
+[![codecov.io](http://codecov.io/github/JuliaPy/PyCallJLD.jl/coverage.svg?branch=master)](http://codecov.io/github/JuliaPy/PyCallJLD.jl?branch=master)
 
 PyCallJLD enables saving and loading [PyCall's `PyObject`s](https://github.com/JuliaPy/PyCall.jl) using [JLD.jl](https://github.com/JuliaIO/JLD.jl/). Example:
 
