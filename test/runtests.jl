@@ -10,3 +10,7 @@ save("temp.jld", "x", obj)
 
 save("temp.jld", "x", PyObject("fé"))
 @test load("temp.jld", "x") == PyObject("fé")
+
+obj = PyObject(rand(UInt8, 1000))
+save("temp.jld", "x", obj)
+@test load("temp.jld", "x") == obj

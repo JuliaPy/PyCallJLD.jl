@@ -17,10 +17,12 @@ end
 
 function JLD.writeas(pyo::PyObject)
     b = PyCall.PyBuffer(pycall(dumps, PyObject, pyo))
-    # I think we need a `copy` here because the PyBuffer might be GC'ed after we've
-    # left this scope.
+    # We need a `copy` here because the PyBuffer might be GC'ed after we've
+    # left this scope, but see
+    # https://github.com/JuliaPy/PyCallJLD.jl/pull/3/files/17b052d018f79905baf855b40e440d2cacc171ae#r115525173
     PyObjectSerialization(copy(unsafe_wrap(Array, Ptr{UInt8}(pointer(b)), sizeof(b))))
 end
+
 function JLD.readas(pyo_ser::PyObjectSerialization)
     pycall(loads, PyObject,
            PyObject(PyCall.@pycheckn ccall(@pysym(PyCall.PyString_FromStringAndSize),
