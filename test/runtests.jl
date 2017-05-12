@@ -19,5 +19,6 @@ try
     save(tmp, "x", obj)
     @test load(tmp, "x") == obj
 finally
-    rm(dir, force=true, recursive=true)
+    # Disabled because it fails on Travis-Linux
+    #rm(dir, force=true, recursive=true)
 end
