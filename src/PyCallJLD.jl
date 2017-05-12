@@ -1,4 +1,5 @@
 # See https://github.com/JuliaIO/JLD.jl/blob/master/doc/jld.md#custom-serialization
+__precompile__()
 module PyCallJLD
 
 using PyCall, JLD
