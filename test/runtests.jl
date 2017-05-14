@@ -2,8 +2,7 @@ using PyCallJLD
 using Base.Test
 using PyCall, JLD
 
-dir = tempdir()
-tmp = joinpath(dir, "temp.jld")
+tmp = joinpath(tempdir(), "temp.jld")
 
 try
     const deque = pyimport("collections")["deque"]
@@ -19,6 +18,5 @@ try
     save(tmp, "x", obj)
     @test load(tmp, "x") == obj
 finally
-    # Disabled because it fails on Travis-Linux
-    #rm(dir, force=true, recursive=true)
+    rm(tmp, force=true)
 end
