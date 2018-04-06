@@ -8,8 +8,9 @@ const dumps = PyNULL()
 const loads = PyNULL()
 
 function __init__()
-    copy!(dumps, pyimport("cPickle")[:dumps])
-    copy!(loads, pyimport("cPickle")[:loads])
+    pickle = pyimport(PyCall.pyversion.major ≥ 3 ? "pickle" : "cPickle")
+    copy!(dumps, pickle["dumps"])
+    copy!(loads, pickle["loads"])
 end
 
 immutable PyObjectSerialization
