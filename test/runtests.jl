@@ -1,5 +1,5 @@
 using PyCallJLD
-using Base.Test
+using Test
 using PyCall, JLD
 
 tmp = joinpath(tempdir(), "temp.jld")
