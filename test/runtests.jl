@@ -1,12 +1,11 @@
 using PyCallJLD
-using Base.Test
+using Test
 using PyCall, JLD
 
 tmp = joinpath(tempdir(), "temp.jld")
+const deque = pyimport("collections")["deque"]
 
 try
-    const deque = pyimport("collections")["deque"]
-
     obj = [deque([1,2,3]), deque([4,5,6])]
     save(tmp, "x", obj)
     @test load(tmp, "x") == obj
