@@ -13,7 +13,7 @@ function __init__()
     copy!(loads, pickle["loads"])
 end
 
-immutable PyObjectSerialization
+struct PyObjectSerialization
     repr::Vector{UInt8}
 end
 
