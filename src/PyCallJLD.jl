@@ -9,8 +9,8 @@ const loads = PyNULL()
 
 function __init__()
     pickle = pyimport(PyCall.pyversion.major ≥ 3 ? "pickle" : "cPickle")
-    copy!(dumps, pickle["dumps"])
-    copy!(loads, pickle["loads"])
+    copy!(dumps, pickle.dumps])
+    copy!(loads, pickle.loads)
 end
 
 struct PyObjectSerialization
