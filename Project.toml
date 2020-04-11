@@ -1,0 +1,20 @@
+name = "PyCallJLD"
+uuid = "de320387-30cd-5f83-91a8-a6e0ae8b8444"
+version = "0.2.0"
+
+[deps]
+PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
+JLD = "4138dd39-2aa7-5051-a626-17a0bb65d9c8"
+
+[compat]
+julia = "1"
+PyCall = "1.91.4"
+JLD = "0.9.2"
+
+[extras]
+PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
+JLD = "4138dd39-2aa7-5051-a626-17a0bb65d9c8"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["PyCall", "JLD", "Test"]
