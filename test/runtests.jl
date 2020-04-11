@@ -3,7 +3,7 @@ using Test
 using PyCall, JLD
 
 tmp = joinpath(tempdir(), "temp.jld")
-const deque = pyimport("collections")["deque"]
+const deque = pyimport("collections").deque
 
 try
     obj = [deque([1,2,3]), deque([4,5,6])]
