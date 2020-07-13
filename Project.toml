@@ -9,7 +9,7 @@ JLD = "4138dd39-2aa7-5051-a626-17a0bb65d9c8"
 [compat]
 julia = "1"
 PyCall = "1.91"
-JLD = "0.10"
+JLD = "0.9, 0.10"
 
 [extras]
 PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
