@@ -1,6 +1,6 @@
 name = "PyCallJLD"
 uuid = "de320387-30cd-5f83-91a8-a6e0ae8b8444"
-version = "0.2.0"
+version = "0.2.1"
 
 [deps]
 PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
