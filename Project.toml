@@ -1,6 +1,6 @@
 name = "PyCallJLD"
 uuid = "de320387-30cd-5f83-91a8-a6e0ae8b8444"
-version = "0.2.0"
+version = "0.2.1"
 
 [deps]
 PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
@@ -9,7 +9,7 @@ JLD = "4138dd39-2aa7-5051-a626-17a0bb65d9c8"
 [compat]
 julia = "1"
 PyCall = "1.91"
-JLD = "0.9, 0.10"
+JLD = "0.9, 0.10, 0.11, 0.12"
 
 [extras]
 PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
